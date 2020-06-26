@@ -1,4 +1,5 @@
 <?php
+session_start();
 $host="localhost";
 $user="root";
 $pass="";
@@ -17,7 +18,8 @@ if(isset($_POST['phone'])){
 
     $result = mysqli_query($conn, $sql);
     if(($result->num_rows)==1){
-        header('location:welcome.php');
+        $_SESSION['phone']=$phone;
+        header('location:welcome.html');
     }
     else{
         echo "incorrect phno or password";
@@ -27,6 +29,6 @@ if(isset($_POST['phone'])){
 }
 }
 $conn->close();
-d8578edf8458ce06fbc5bb76a58c5ca4
+
 
 ?>

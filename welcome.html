@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <?php
+  function runMyFunction() {
+    echo 'I just ran a php function';
+  }
+
+  if (isset($_GET['hello'])) {
+    runMyFunction();
+  }
+?>
+
+  Logout
+  <a href="logout.php">Click here to logout</a>
+  Session value!
+  <a href="session.php">Click here to view session value</a>
+</html>
